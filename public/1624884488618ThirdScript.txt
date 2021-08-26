@@ -1,0 +1,80 @@
+:: StoryTitle
+odctest
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: First[START]
+Hi
+
+[[Hello]]
+
+:: Hello
+Welcome to ODC, How can I help you?
+
+[[Thank you, I want to learn about coding==Coding]]
+[[Thank you, I want to learn about designing==Designing]]
+
+:: Thank you, I want to learn about coding==Coding
+So what platform do you wanna code for
+
+[[I prefer android==Android]]
+[[I'd rather do web development==Web]]
+[[I want to dabble in Game development==Game]]
+
+:: Thank you, I want to learn about designing==Designing
+Greate, so what platforme are you intrested in ?
+
+[[I prefer designing UI for mobile applications==UI]]
+[[i more into 3D design==3D]]
+
+:: I prefer android==Android
+you can contact our android developer Oussema
+
+[[of course i will thx]]
+
+:: I'd rather do web development==Web
+Sure you can contact our web developer Ines
+
+[[that will be great]]
+
+:: I want to dabble in Game development==Game
+Sure, you can contact our game developer Omar
+
+[[i will do that thx]]
+
+:: I prefer designing UI for mobile applications==UI
+Ahh , you mean for android and ios
+
+[[yep both]]
+
+:: i more into 3D design==3D
+That works great with our department of game development
+
+[[Great thank you]]
+
+:: Great thank you 
+[[End]]
+
+
+:: End[END]
+
+
+:: yep both
+[[End]]
+
+
+:: i will do that thx
+[[End]]
+
+
+:: that will be great
+[[End]]
+
+
+:: of course i will thx
+[[End]]
+
