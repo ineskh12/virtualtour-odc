@@ -3,6 +3,7 @@ const helmet = require("helmet");
 const mongoose = require('mongoose');
 var path = require('path'); 
 
+const userRouter = require('./app/routes/users.routes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 // create express app
@@ -51,8 +52,8 @@ app.get('/', (req, res) => {
 
 //console.log(process.env.PORT)
 require('./app/routes/characters.routes')(app);
-require('./app/routes/users.routes.js')(app);
-
+//require('./app/routes/users.routes.js')(app);
+app.use(userRouter);
 // listen for requests
 app.listen(process.env.PORT || 3001, () => {
     console.log("Server is listening on port 3001");

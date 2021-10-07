@@ -1,4 +1,3 @@
-
 const Character = require('../models/characters.model.js');
 
 const mongoose = require('mongoose');
@@ -102,104 +101,6 @@ exports.findOne = (req, res) => {
         });
     });
 };
-
-
-
-
-
-// Update a ad identified by the charId in the request
-exports.update = async (req, res) => {
-    const character = await Character.findById(req.params.charId);
-  
-    if (req.body.nom !== undefined) {
-        character.nom = req.body.nom;
-    }
-    if (req.body.sexe!== undefined) {
-        character.sexe = req.body.sexe;
-    }
-    if (req.body.peau!== undefined) {
-        character.peau = req.body.peau;
-    }
-    if (req.body.peau!== undefined) {
-        character.peau = req.body.peau;
-    }
-
-    if (req.body.cheveux!== undefined) {
-        character.cheveux = req.body.cheveux;
-    }
-   
-    if (req.body.pilositefacial!== undefined) {
-        character.pilositefacial = req.body.pilositefacial;
-    }
-    if (req.body.vetement!== undefined) {
-        character.vetement = req.body.vetement;
-    }
- 
-    if (req.body.accessoire!== undefined) {
-        character.accessoire = req.body.accessoire;
-    }
-    if (req.body.accessoire!== undefined) {
-        character.accessoire = req.body.accessoire;
-    }
-
-    if (req.file !== undefined) {
-        character.chat = req.file.filename;
-    }
- 
-    if (req.body.pays!== undefined) {
-        character.pays = req.body.pays;
-    }
-   
-     if (req.body.postedBy!== undefined) {
-        character.postedBy = req.body.postedBy;
-    }
-    
-     // Find character and update it with the request body
-     character.save()
-     .then(character => {
-         if(!character) {
-             return res.status(404).send({
-                 message: "character not found with id " + req.params.charId
-             });
-         }
-         res.send(character);
-     }).catch(err => {
-         if(err.kind === 'ObjectId') {
-             return res.status(404).send({
-                 message: "character not found with id " +req.params.charId
-             });                
-         }
-         return res.status(500).send({
-             message: "Error updating character with id " + req.params.charId
-         });
-     });
- };
- 
-
-// Delete a character with the specified charId in the request
-exports.delete = (req, res) => {
-    Character.findByIdAndRemove(req.params.charId)
-    .then(character => {
-        if(!character) {
-            return res.status(404).send({
-                message: "character not found with id " + req.params.charId
-            });
-        }
-        res.send({message: "character deleted successfully!"});
-    }).catch(err => {
-        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
-            return res.status(404).send({
-                message: "character not found with id " + req.params.charId
-            });                
-        }
-        return res.status(500).send({
-            message: "Could not delete character with id " + req.params.charId
-        });
-    });
-};
-
-
-
 
 
 
