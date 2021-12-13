@@ -1,0 +1,68 @@
+:: StoryTitle
+greetings
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Untitled Passage[START]
+Hello i am here to help you
+[[hey]]
+[[i don't need it]]
+[[i really need it, thx]]
+
+
+
+:: hey
+this is just a test
+[[yeah i know let's end this]]
+
+:: i don't need it
+Okay then see you later
+[[cy@]]
+
+
+:: i really need it, thx
+Greate let's end this for now
+[[okay, later then]]
+
+:: cy@
+[[end]]
+
+:: yeah i know let's end this
+just keep talking need to test some things
+[[okay i get it]]
+[[will we test input fields]]
+
+:: okay, later then
+[[end]]
+
+:: okay i get it
+[[end]]
+
+:: will we test input fields[SEND]
+yeah we will, now in fact
+[[good]]
+[[so what's my name]]
+
+:: good
+don't need to try me
+[[nah, no need]]
+
+:: so what's my name
+you need to tell me first
+[[Send]]
+
+:: nah, no need
+[[end]]
+
+:: Send[SEND]
+[[yep, you get it]]
+
+:: yep, you get it
+[[end]]
+
+:: end[END]
+

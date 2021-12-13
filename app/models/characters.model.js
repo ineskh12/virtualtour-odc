@@ -10,7 +10,7 @@ const CharacterSchema = mongoose.Schema({
     accessoire :String,
     chat:String,
     pays:String,
-    postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+   // postedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 }, {
     timestamps: true
 });
