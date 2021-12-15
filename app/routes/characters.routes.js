@@ -26,7 +26,7 @@ module.exports = (app) => {
 
    // get calendar content 
 
- //  app.get('/calendar/:pays', characters.getdata);
+   app.get('/calendar/:pays', characters.getdata);
 
    // Delete a characters with charId
    //app.delete('/characters/:charId', characters.delete);

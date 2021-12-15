@@ -47,15 +47,15 @@ router.post('/login', async (req, res) => {
 
 
 
-router.get('/getallbypays/:country', async (req, res) => {
-   try {
+// router.get('/getallbypays/:country', async (req, res) => {
+//    try {
    
-    const usrs = await User.find({'country': req.params.country}).sort({"updatedAt":-1});
-    res.json(usrs);
-   } catch (err) {
-    res.json({ error: err.message || err.toString() });
-   }
-  });
+//     const usrs = await User.find({'country': req.params.country}).sort({"updatedAt":-1});
+//     res.json(usrs);
+//    } catch (err) {
+//     res.json({ error: err.message || err.toString() });
+//    }
+//   });
 
 router.get('/getall', async (req, res) => {
    try {

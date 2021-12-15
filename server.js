@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 
 //console.log(process.env.PORT)
 require('./app/routes/characters.routes')(app);
-//require('./app/routes/users.routes.js')(app);
+require('./app/routes/question.routes.js')(app);
 app.use(userRouter);
 // listen for requests
 app.listen(process.env.PORT || 3001, () => {

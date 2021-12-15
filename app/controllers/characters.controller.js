@@ -76,21 +76,47 @@ exports.findAllByCountry = (req, res) => {
 
 
 // Retrieve and return all characters from the database.
-// exports.getdata = (req, res) => {
+//  exports.getdata = (req, res) => {
 
-// const cn = req.params.pays
+//  const cn = req.params.pays
 
 
-//  const promise = axios.get('https://www.orangedigitalcenters.com/api/v1/client/country/'+cn+'/event').then(res => res.data)
+ // const promise = axios.get('https://www.orangedigitalcenters.com/api/v1/client/country/'+cn+'/event').then(res => res.data)
 
-//     promise.then(data => {
-//         response.json({ message: 'Request received!', data })
-//     })
-//     .catch(err => console.log(err))
+//      promise.then(data => {
+//          response.json({ message: 'Request received!', data })
+//   })  .catch(err => console.log(err))
 
  
  
-// };
+ //};
+
+// Retrieve and return all characters from the database.
+exports.getdata = async(req, res) => {
+    const cn = req.params.pays
+    try {
+		const response = await axios.get('https://www.orangedigitalcenters.com/api/v1/client/country/'+cn+'/event');
+       const ines= response.data
+       //console.log(ines)
+       res.status(200).json(ines)
+            
+          
+      
+	} catch (err) {
+		res.status(500).json({ message: err });
+	}
+};
+
+   
+ 
+      
+     
+  
+    
+ 
+
+      
+   
 
 
 
